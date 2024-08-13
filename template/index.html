@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</Customer_Churn_Prediction>
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Customer Churn Prediction</h1>
+        <p>Upload your CSV file containing customer data to predict churn probability.</p>
+        
+        <form id="upload-form" action="/predict" method="POST" enctype="multipart/form-data">
+            <label for="file-upload" class="custom-file-upload">
+                Choose CSV File
+            </label>
+            <input type="file" id="file-upload" name="file" accept=".csv" required>
+            <button type="submit">Predict</button>
+        </form>
+        
+        <div id="result">
+            <!-- The prediction result will be displayed here after processing -->
+        </div>
+    </div>
 </body>
 </html>
